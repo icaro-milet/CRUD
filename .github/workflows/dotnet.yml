@@ -5,7 +5,11 @@ name: SonarCloud
 
 on:
   push:
+    paths:
+      - 'src/**'
     branches: [ "main" ]
+    paths:
+      - 'src/**'
   pull_request:
     branches: [ "main" ]
 jobs:
@@ -47,5 +51,7 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"crud" /o:"milet-projects" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          <insert_your_build_command>
+          dotnet restore $(solutionFolder)
+          dotnet build $(solutionFolder) --configuration Release
+          dotnet-coverage collect 'dotnet test --no-build' -f xml -o 'coverage.xml'  
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
