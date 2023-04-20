@@ -7,6 +7,12 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   build:
+    name: Install SonarCloud scanner
+      run: |
+        dotnet tool install --global dotnet-sonarscanner
+        dotnet tool install --global dotnet-coverage
+    name: Install Report Generator
+      run: dotnet tool install --global dotnet-reportgenerator-globaltool
     name: Build and analyze
     runs-on: windows-latest
     steps:
