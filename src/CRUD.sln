@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Tests", "3 - Tests", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.API", "CRUD.API\CRUD.API.csproj", "{72F02D7B-8A4E-46A0-9182-8638E117E87B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Domain", "CRUD.Domain\CRUD.Domain.csproj", "{CF7DD042-9191-4541-98C1-4C3BB4BC65CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{72F02D7B-8A4E-46A0-9182-8638E117E87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F02D7B-8A4E-46A0-9182-8638E117E87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F02D7B-8A4E-46A0-9182-8638E117E87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7DD042-9191-4541-98C1-4C3BB4BC65CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7DD042-9191-4541-98C1-4C3BB4BC65CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7DD042-9191-4541-98C1-4C3BB4BC65CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7DD042-9191-4541-98C1-4C3BB4BC65CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{72F02D7B-8A4E-46A0-9182-8638E117E87B} = {B5309E73-C5CF-4FB7-87BB-28B634EA8757}
+		{CF7DD042-9191-4541-98C1-4C3BB4BC65CE} = {B2A8A190-53AD-493A-AC85-AE02CA5706A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {196FBF65-0C2D-4B5B-84E8-1F1BA6AE4409}
