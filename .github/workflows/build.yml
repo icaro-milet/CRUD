@@ -47,5 +47,6 @@ jobs:
           cd .\src\
           dotnet restore $(solutionFolder)
           dotnet build $(solutionFolder) --configuration Release
+          dotnet-coverage collect 'dotnet test --no-build' -f xml -o 'coverage.xml'
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
